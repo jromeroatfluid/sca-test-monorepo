@@ -1,0 +1,10 @@
+{
+  "name": "@sca-test/legacy",
+  "version": "1.0.0",
+  "description": "Transitive vulns via old parents (mkdirp->minimist, request->tough-cookie+qs)",
+  "dependencies": {
+    "mkdirp": "0.5.1",
+    "request": "2.88.2",
+    "optimist": "0.6.1"
+  }
+}

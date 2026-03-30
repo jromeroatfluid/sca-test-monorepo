@@ -1,0 +1,11 @@
+{
+  "name": "@sca-test/conflicts",
+  "version": "1.0.0",
+  "description": "Conflicting deps: chokidar pulls glob-parent@5.1.2 but we also have glob-parent@5.1.1 directly",
+  "dependencies": {
+    "chokidar": "3.5.1",
+    "glob-parent": "5.1.1",
+    "yargs-parser": "13.1.2",
+    "json5": "1.0.1"
+  }
+}
