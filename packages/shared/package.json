@@ -1,0 +1,9 @@
+{
+  "name": "@sca-test/shared",
+  "version": "1.0.0",
+  "dependencies": {
+    "moment": "2.29.1",
+    "underscore": "1.12.0",
+    "node-forge": "0.10.0"
+  }
+}

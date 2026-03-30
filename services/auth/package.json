@@ -1,0 +1,10 @@
+{
+  "name": "@sca-test/auth",
+  "version": "1.0.0",
+  "dependencies": {
+    "passport": "0.4.1",
+    "bcrypt": "5.0.1",
+    "cookie-parser": "1.4.5",
+    "helmet": "4.6.0"
+  }
+}
