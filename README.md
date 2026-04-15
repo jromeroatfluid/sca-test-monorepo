@@ -1,7 +1,8 @@
 # SCA Test Monorepo
 
 Test repository for Fluid Attacks SCA auto-remediation agent.
-Contains **47 known npm vulnerabilities** across 7 package.json files.
+Contains **47 known npm vulnerabilities** across 7 package.json files,
+plus **yarn test projects** covering the same vulnerability categories.
 
 ## Structure
 
@@ -69,3 +70,44 @@ services/
 |-------|---------|
 | glob-parent | Direct dep@5.1.1 AND transitive via chokidar@3.5.1 |
 | minimist | Direct devDep@1.2.5 (root) AND transitive@0.0.8 (legacy) |
+
+---
+
+## Yarn Test Projects
+
+Located in `yarn/`. Each subdirectory is an independent yarn project
+(with its own yarn.lock) covering the same vulnerability categories.
+
+### Structure
+
+```
+yarn/
+  simple/                  # Direct deps: lodash, semver, moment, express, axios, node-forge
+  transitive/              # Single parent: request->tough-cookie+qs, chokidar->braces,
+                           # webpack-dev-server->many vulns
+  multi-parent/            # mkdirp + optimist both pull minimist@0.0.8
+  abandoned/               # request (deprecated), optimist (unmaintained), node-notifier
+  conflicts/               # glob-parent direct + transitive via chokidar, minimist devDep
+  workspaces/              # Yarn workspaces monorepo
+    packages/api/          # express, jsonwebtoken
+    packages/shared/       # moment, underscore
+```
+
+### Yarn-specific test cases
+
+| Category | Project | Key packages |
+|----------|---------|-------------|
+| Direct bump (patch/minor) | simple | lodash@4.17.20, semver@7.5.3, moment@2.29.1 |
+| Direct major (breaking) | simple | express@4.17.1, axios@0.21.1, node-forge@0.10.0 |
+| Transitive (single parent) | transitive | tough-cookie via request, braces via chokidar |
+| Transitive (multi-parent) | multi-parent | minimist@0.0.8 via mkdirp + optimist |
+| Abandoned parent (resolutions) | abandoned | request@2.88.2, optimist@0.6.1 |
+| Conflict (direct + transitive) | conflicts | glob-parent direct + via chokidar |
+| Workspaces | workspaces | lodash root + express/jsonwebtoken in api workspace |
+
+### Yarn override mechanism
+
+Yarn uses `resolutions` in package.json (not `overrides` like npm):
+```json
+{"resolutions": {"minimist": ">=1.2.8"}}
+```

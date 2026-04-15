@@ -1,2 +1,4 @@
 node_modules/
 .npm/
+yarn/*/node_modules/
+yarn/workspaces/node_modules/

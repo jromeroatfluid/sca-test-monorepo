@@ -1,0 +1,11 @@
+{
+  "name": "yarn-transitive",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Transitive vulnerabilities via single parent",
+  "dependencies": {
+    "request": "2.88.2",
+    "chokidar": "3.5.1",
+    "webpack-dev-server": "3.11.0"
+  }
+}

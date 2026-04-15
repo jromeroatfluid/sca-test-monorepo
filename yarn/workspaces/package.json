@@ -1,0 +1,12 @@
+{
+  "name": "yarn-workspaces",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Yarn workspaces monorepo with mixed vuln types",
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "lodash": "4.17.20"
+  }
+}
