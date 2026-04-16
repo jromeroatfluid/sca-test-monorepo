@@ -2,10 +2,6 @@
   "name": "sca-test-monorepo",
   "version": "1.0.0",
   "private": true,
-  "workspaces": [
-    "packages/*",
-    "services/*"
-  ],
   "dependencies": {
     "lodash": "4.17.20",
     "semver": "7.5.3"
