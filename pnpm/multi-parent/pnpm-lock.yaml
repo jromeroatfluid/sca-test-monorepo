@@ -1,0 +1,53 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      mkdirp:
+        specifier: 0.5.1
+        version: 0.5.1
+      optimist:
+        specifier: 0.6.1
+        version: 0.6.1
+
+packages:
+
+  minimist@0.0.10:
+    resolution: {integrity: sha512-iotkTvxc+TwOm5Ieim8VnSNvCDjCK9S8G3scJ50ZthspSxa7jx50jkhYduuAtAjvfDUwSgOwf8+If99AlOEhyw==}
+
+  minimist@0.0.8:
+    resolution: {integrity: sha512-miQKw5Hv4NS1Psg2517mV4e4dYNaO3++hjAvLOAzKqZ61rH8NS1SK+vbfBWZ5PY/Me/bEWhUwqMghEW5Fb9T7Q==}
+
+  mkdirp@0.5.1:
+    resolution: {integrity: sha512-SknJC52obPfGQPnjIkXbmA6+5H15E+fR+E4iR2oQ3zzCLbd7/ONua69R/Gw7AgkTLsRG+r5fzksYwWe1AgTyWA==}
+    deprecated: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+    hasBin: true
+
+  optimist@0.6.1:
+    resolution: {integrity: sha512-snN4O4TkigujZphWLN0E//nQmm7790RYaE53DdL7ZYwee2D8DDo9/EyYiKUfN3rneWUjhJnueija3G9I2i0h3g==}
+
+  wordwrap@0.0.3:
+    resolution: {integrity: sha512-1tMA907+V4QmxV7dbRvb4/8MaRALK6q9Abid3ndMYnbyo8piisCmeONVqVSXqQA3KaP4SLt5b7ud6E2sqP8TFw==}
+    engines: {node: '>=0.4.0'}
+
+snapshots:
+
+  minimist@0.0.10: {}
+
+  minimist@0.0.8: {}
+
+  mkdirp@0.5.1:
+    dependencies:
+      minimist: 0.0.8
+
+  optimist@0.6.1:
+    dependencies:
+      minimist: 0.0.10
+      wordwrap: 0.0.3
+
+  wordwrap@0.0.3: {}

@@ -1,0 +1,16 @@
+{
+  "name": "pnpm-conflicts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Same package as both direct and transitive dependency",
+  "packageManager": "pnpm@10.20.0",
+  "dependencies": {
+    "glob-parent": "5.1.1",
+    "chokidar": "3.5.1",
+    "yargs-parser": "13.1.1",
+    "json5": "1.0.1"
+  },
+  "devDependencies": {
+    "minimist": "1.2.5"
+  }
+}

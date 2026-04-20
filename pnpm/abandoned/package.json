@@ -1,0 +1,12 @@
+{
+  "name": "pnpm-abandoned",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Abandoned/deprecated parents requiring pnpm.overrides",
+  "packageManager": "pnpm@10.20.0",
+  "dependencies": {
+    "request": "2.88.2",
+    "optimist": "0.6.1",
+    "node-notifier": "8.0.0"
+  }
+}

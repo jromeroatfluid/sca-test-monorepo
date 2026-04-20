@@ -1,0 +1,9 @@
+{
+  "name": "@pnpm-workspaces/shared",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "moment": "2.29.1",
+    "underscore": "1.12.0"
+  }
+}
